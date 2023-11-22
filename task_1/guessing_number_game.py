@@ -24,7 +24,7 @@ def guess():
 
 # Initial guess
 guess()
-
+n
 while True:
     choice = input("Do you want to continue? (Y/N)").lower()
 
