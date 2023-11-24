@@ -1,1 +1,0 @@
-![banner](task_4/image.png)
