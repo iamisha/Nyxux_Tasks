@@ -116,16 +116,12 @@ def main():
             update_student()
         elif choice == 5:
             delete_student()
-
-
         elif choice == 6:
             sorted_students = sorted(students, key=get_marks, reverse=True)
             for student in sorted_students:
                 print(student)
-            
         elif choice == 7:
             print("You're exited from LMS...")
-
         else:
             print("Invalid choice. Please enter a valid option (1-7).")
 
