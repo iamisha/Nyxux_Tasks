@@ -25,5 +25,5 @@
 
 # Day - 5 Topics
 * Class/Objects
-* Instance variable/method
-* static variable/method
+* Instance variable/methods
+* Static variable/methods
