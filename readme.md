@@ -22,3 +22,11 @@
 *  Offers a shorter syntax when creating a new list based on the values of an existing list.
 
 # Day - 4(Presentation)
+
+# Day - 5 Topics
+* Class/Objects
+* Instance variable/method
+* static variable/method
+* init
+* str
+* repr
