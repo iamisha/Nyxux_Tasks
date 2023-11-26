@@ -37,12 +37,18 @@ def view_all_students():
 
 # 5. Search for a student
 def search_student():
-    roll_no = input("Enter the roll number to search: ")
+    roll_no = int(input("Enter roll number to search: "))
+    found_student = None
+
     for student in students:
         if student.roll_no == roll_no:
-            print(student)
-            return
-    print("Student not found.")
+            found_student = student
+            break
+
+    if found_student:
+        print(found_student)
+    else:
+        print("Student with roll number", roll_no, "not found.")
 
 # 6. Update student
 def update_student():
