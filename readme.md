@@ -6,9 +6,10 @@
 
 # Day - 2 Topics
 1. Error Handling
-2. Lists
-3. Tuples
-4. Set
+2. Built-in data structures
+*  Lists
+*  Tuples
+*  Set
 
 # Day - 3 Topics
 1. Dictionaries

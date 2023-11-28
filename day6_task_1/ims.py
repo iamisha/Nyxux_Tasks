@@ -1,4 +1,4 @@
-class ProductManager:
+class InventoryItem:
     product_id_counter = 0
     product_list = []
 
@@ -84,7 +84,7 @@ class ProductManager:
         except Exception as e:
             print(e)
 
-class ElectronicInventory(ProductManager):
+class ElectronicInventory(InventoryItem):
     def __init__(self, name, price, stock, category):
         super().__init__(name, price, stock, category)
 
