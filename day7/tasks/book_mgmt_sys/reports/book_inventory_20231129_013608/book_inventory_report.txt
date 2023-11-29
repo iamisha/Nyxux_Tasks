@@ -1,0 +1,4 @@
+Book Inventory Report
+Generated on: 2023-11-29 01:36:08
+
+ID: 1, Title: The Mountain is You, Author: Berrain Huwa, Quantity: 3

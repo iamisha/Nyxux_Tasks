@@ -1,11 +1,12 @@
-from book_management import BookManagement  # Assuming the book_management module is in the same directory
+from book_management import BookManagement
 from member_management import LibraryMember
 from generate_reports import ReportGeneration
+from error_handling import InvalidISBNError, NegativeQuantityError, MemberNotFoundError
+
 def main():
     book_manager = BookManagement()
     member_manager = LibraryMember()
     generate_reports = ReportGeneration(book_manager, member_manager)
-    
 
     while True:
         print("\nLibrary Management System")
@@ -19,7 +20,7 @@ def main():
         if choice == '1':
             manage_books(book_manager)
         elif choice == '2':
-            manage_members(member_manager)  # You can create a similar function for managing members
+            manage_members(member_manager)
         elif choice == '3':
              while True:
                 print("\nReport Generation Menu")
@@ -40,7 +41,7 @@ def main():
                     break
                 else:
                     print("Invalid choice. Please enter a number between 1 and 4.")
-        
+
         elif choice == '4':
             print("Exiting the program. Goodbye!")
             break
@@ -58,27 +59,34 @@ def manage_books(book_manager):
 
         choice = input("Enter your choice (1-5): ")
 
-        if choice == '1':
-            book_id = int(input("Enter Book ID: "))
-            title = input("Enter Title: ")
-            author = input("Enter Author: ")
-            quantity = int(input("Enter Quantity: "))
-            book_manager.add_book(book_id, title, author, quantity)
-        elif choice == '2':
-            book_id = int(input("Enter Book ID to update: "))
-            title = input("Enter Updated Title (Press Enter to keep the current title): ")
-            author = input("Enter Updated Author (Press Enter to keep the current author): ")
-            quantity = int(input("Enter Updated Quantity (Press Enter to keep the current quantity): "))
-            book_manager.update_book(book_id, title, author, quantity)
-        elif choice == '3':
-            book_id = int(input("Enter Book ID to remove: "))
-            book_manager.remove_book(book_id)
-        elif choice == '4':
-            book_manager.display_inventory()
-        elif choice == '5':
-            break
-        else:
-            print("Invalid choice. Please enter a number between 1 and 5.")
+        try:
+            if choice == '1':
+                book_id = int(input("Enter Book ID: "))
+                title = input("Enter Title: ")
+                author = input("Enter Author: ")
+                quantity = int(input("Enter Quantity: "))
+                isbn = int(input("Enter ISBN: "))
+                book_manager.add_book(book_id, title, author, quantity, isbn)
+            elif choice == '2':
+                book_id = int(input("Enter Book ID to update: "))
+                title = input("Enter Updated Title (Press Enter to keep the current title): ")
+                author = input("Enter Updated Author (Press Enter to keep the current author): ")
+                quantity = int(input("Enter Updated Quantity (Press Enter to keep the current quantity): "))
+                isbn = int(input("Enter Updated ISBN (Press Enter to keep the current ISBN): "))
+                book_manager.update_book(book_id, title, author, quantity, isbn)
+            elif choice == '3':
+                book_id = int(input("Enter Book ID to remove: "))
+                book_manager.remove_book(book_id)
+            elif choice == '4':
+                book_manager.display_inventory()
+            elif choice == '5':
+                break
+            else:
+                print("Invalid choice. Please enter a number between 1 and 5.")
+
+        except (InvalidISBNError, NegativeQuantityError) as e:
+            print(f"Error: {e}")
+
 def manage_members(member_manager):
     while True:
         print("\nMember Management Menu")
@@ -90,27 +98,31 @@ def manage_members(member_manager):
 
         choice = input("Enter your choice (1-5): ")
 
-        if choice == '1':
-            member_id = int(input("Enter Member ID: "))
-            name = input("Enter Name: ")
-            address = input("Enter Address: ")
-            contact = input("Enter Contact: ")
-            member_manager.add_member(member_id, name, address, contact)
-        elif choice == '2':
-            member_id = int(input("Enter Member ID to update: "))
-            name = input("Enter Updated Name (Press Enter to keep the current name): ")
-            address = input("Enter Updated Address (Press Enter to keep the current address): ")
-            contact = input("Enter Updated Contact (Press Enter to keep the current contact): ")
-            member_manager.update_member(member_id, name, address, contact)
-        elif choice == '3':
-            member_id = int(input("Enter Member ID to remove: "))
-            member_manager.remove_member(member_id)
-        elif choice == '4':
-            member_manager.display_members()
-        elif choice == '5':
-            break
-        else:
-            print("Invalid choice. Please enter a number between 1 and 5.")
-            
+        try:
+            if choice == '1':
+                member_id = int(input("Enter Member ID: "))
+                name = input("Enter Name: ")
+                address = input("Enter Address: ")
+                contact = input("Enter Contact: ")
+                member_manager.add_member(member_id, name, address, contact)
+            elif choice == '2':
+                member_id = int(input("Enter Member ID to update: "))
+                name = input("Enter Updated Name (Press Enter to keep the current name): ")
+                address = input("Enter Updated Address (Press Enter to keep the current address): ")
+                contact = input("Enter Updated Contact (Press Enter to keep the current contact): ")
+                member_manager.update_member(member_id, name, address, contact)
+            elif choice == '3':
+                member_id = int(input("Enter Member ID to remove: "))
+                member_manager.remove_member(member_id)
+            elif choice == '4':
+                member_manager.display_members()
+            elif choice == '5':
+                break
+            else:
+                print("Invalid choice. Please enter a number between 1 and 5.")
+
+        except MemberNotFoundError as e:
+            print(f"Error: {e}")
+
 if __name__ == "__main__":
     main()
