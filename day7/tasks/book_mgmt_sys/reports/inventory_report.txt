@@ -1,0 +1,3 @@
+Inventory Report:
+Python Basics (123456789): 5 available
+Advanced Python (987654321): 3 available
