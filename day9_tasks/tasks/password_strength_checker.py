@@ -1,3 +1,10 @@
+
+""" 
+1. Create a password strength checker that uses regular expressions to enforce strong
+password criteria. Define a class for managing user accounts, including functions for
+password validation and user registration. This project will involve working with
+classes, functions, and regex.
+"""
 import re
 
 

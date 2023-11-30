@@ -1,5 +1,8 @@
 """ 
-
+3. Develop a quiz game where questions are stored in a JSON file. Use classes to
+represent the game, questions, and players. Functions can handle game logic, scoring,
+and displaying questions. The JSON file can store the questions with options and
+correct answers.
 """
 
 import json
