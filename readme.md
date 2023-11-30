@@ -50,6 +50,8 @@
 * Append
 * Delete
 
+https://www.w3schools.com/python/python_file_handling.asp
+
 # Day - 9 Topics
 1) JSON
 * A syntax for storing and exchanging data.
