@@ -41,3 +41,11 @@
 * DateTime module
 * Math module
 * Os Module 
+
+# Day - 8 Topics
+
+* File Handling
+* Read Files
+* Write Files
+* Append
+* Delete
