@@ -59,3 +59,8 @@
 2) Regex
 * A sequence of characters that forms a search pattern.
 * Can be used to check if a string contains the specified search pattern.
+
+
+for JSON:- https://www.w3schools.com/python/python_json.asp
+
+for regex:- https://www.w3schools.com/python/python_regex.asp`
