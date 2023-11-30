@@ -1,0 +1,53 @@
+[
+    {
+      "question_text": "What is the purpose of the Django framework?",
+      "options": [
+        "To create web applications",
+        "To manage database connections",
+        "To handle user authentication",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question_text": "What is the difference between models and views in Django?",
+      "options": [
+        "Models represent data, while views represent how data is displayed",
+        "Models are used for database operations, while views are used for user interaction",
+        "Models are defined in Python, while views are defined in HTML",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question_text": "What is the URL pattern for a view named 'my_view'?",
+      "options": [
+        "/my_view",
+        "/<my_view>/",
+        "my_view/",
+        "None of the above"
+      ],
+      "correct_answer": "/<my_view>/"
+    },
+    {
+      "question_text": "What is the purpose of the Django migrations system?",
+      "options": [
+        "To track changes to database models",
+        "To apply changes to the database",
+        "To rollback changes to the database",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question_text": "What is the difference between a generic view and a custom view?",
+      "options": [
+        "Generic views are more flexible and reusable",
+        "Custom views have more control over the HTML output",
+        "Generic views are slower than custom views",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    }
+  ]
+  

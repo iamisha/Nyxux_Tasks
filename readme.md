@@ -49,3 +49,13 @@
 * Write Files
 * Append
 * Delete
+
+# Day - 9 Topics
+1) JSON
+* A syntax for storing and exchanging data.
+* A text, written with JavaScript object notation.
+* Python has a built-in package called json, which can be used to work with JSON data.
+
+2) Regex
+* A sequence of characters that forms a search pattern.
+* Can be used to check if a string contains the specified search pattern.
