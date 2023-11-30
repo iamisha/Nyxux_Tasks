@@ -47,7 +47,7 @@ class Employee(Person):
 person_name = input("Enter person's name: ")
 person_age = int(input("Enter person's age: "))
 
-person = Person(person_name, person_ages)
+person = Person(person_name, person_age)
 person_json = person.to_json()
 print(person_json)
 
