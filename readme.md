@@ -11,6 +11,11 @@
 *  Tuples
 *  Set
 
+https://www.w3schools.com/python/gloss_python_error_handling.asp
+https://www.w3schools.com/python/python_lists.asp
+https://www.w3schools.com/python/python_tuples.asp
+https://www.w3schools.com/python/python_sets.asp
+
 # Day - 3 Topics
 1. Dictionaries
 * Used to store data values in key:value pairs.
