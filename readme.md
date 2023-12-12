@@ -73,3 +73,16 @@ for JSON:- https://www.w3schools.com/python/python_json.asp
 for regex:- https://www.w3schools.com/python/python_regex.asp`
 
 # Day - 10 Topics(Presentation)
+
+
+# Day - 17(Django)
+
+* Virtual Environment Set-up
+* Django File Structure
+* Request/response
+* Function based Views and Urls configuration
+* Context
+* Django Templating Engine
+* Django Shortcuts render function
+
+https://docs.djangoproject.com/en/5.0/
