@@ -48,3 +48,10 @@ https://docs.djangoproject.com/en/5.0/
 - Field types
 - Meta Options
 - Making Queries
+
+# Day = 3(Topics)
+
+- Admin Panel
+- Super User
+- Get data from database to views
+- Select_related and prefetch_related
