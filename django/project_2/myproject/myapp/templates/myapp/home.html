@@ -1,0 +1,24 @@
+<!-- myapp/templates/myapp/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Authors and Books</title>
+	</head>
+	<body>
+		<h1>Authors and Books</h1>
+		<ul>
+			{% for author in authors %}
+			<li>
+				{{ author.name }}
+				<ul>
+					{% for book in books %} {% if book.author == author %}
+					<li>{{ book.title }} - {{ book.published_date }}</li>
+					{% endif %} {% endfor %}
+				</ul>
+			</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
