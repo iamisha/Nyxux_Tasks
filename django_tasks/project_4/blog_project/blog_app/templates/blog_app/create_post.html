@@ -1,0 +1,71 @@
+<!-- blog_app/templates/blog_app/create_post.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create a New Post</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f4f4f4;
+				margin: 20px;
+			}
+
+			h1 {
+				color: #333;
+			}
+
+			form {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 5px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+				color: #555;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				padding: 8px;
+				margin-bottom: 15px;
+				box-sizing: border-box;
+			}
+
+			button {
+				background-color: #4caf50;
+				color: #fff;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Create a New Post</h1>
+
+		<form method="post" action="{% url 'create_post' %}">
+			{% csrf_token %}
+			<label for="id_title">Title:</label>
+			{{ form.title }}
+
+			<label for="id_content">Content:</label>
+			{{ form.content }}
+
+			<label for="id_author">Author:</label>
+			{{ form.author }}
+
+			<label for="id_tags">Tags:</label>
+			{{ form.tags }}
+
+			<button type="submit">Create Post</button>
+		</form>
+	</body>
+</html>
