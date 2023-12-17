@@ -49,9 +49,14 @@ https://docs.djangoproject.com/en/5.0/
 - Meta Options
 - Making Queries
 
-# Day = 3(Topics)
+# Day - 3(Topics)
 
 - Admin Panel
 - Super User
 - Get data from database to views
 - Select_related and prefetch_related
+
+# Day - 4(Topics)
+
+- Query Set :-https://docs.djangoproject.com/en/5.0/ref/models/querysets/
+- Model Relation :-https://www.freecodecamp.org/news/django-model-relationships/
