@@ -60,3 +60,10 @@ https://docs.djangoproject.com/en/5.0/
 
 - Query Set :-https://docs.djangoproject.com/en/5.0/ref/models/querysets/
 - Model Relation :-https://www.freecodecamp.org/news/django-model-relationships/
+- Static Files
+- Media Files
+- auto_now=True, auto_now_add=True
+- dynamic routing
+- Django Forms API
+- POST method
+- csrf_token
