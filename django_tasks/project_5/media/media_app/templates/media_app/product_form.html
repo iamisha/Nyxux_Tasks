@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>New Product Form</title>
+		<style>
+			body {
+				font-family: "Arial", sans-serif;
+				background-color: #f8f8f8;
+				margin: 0;
+				padding: 0;
+				color: #333;
+			}
+
+			h2 {
+				text-align: center;
+				margin-top: 20px;
+				color: #1e90ff;
+			}
+
+			form {
+				max-width: 600px;
+				margin: 20px auto;
+				padding: 20px;
+				background-color: #fff;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 15px;
+				box-sizing: border-box;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+			}
+
+			button {
+				background-color: #1e90ff;
+				color: #fff;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 6px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Add a New Product</h2>
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<label for="{{ form.name.id_for_label }}">Product Name:</label>
+			{{ form.name }}
+
+			<label for="{{ form.image.id_for_label }}">Product Image:</label>
+			{{ form.image }}
+
+			<label for="{{ form.price.id_for_label }}">Price:</label>
+			{{ form.price }}
+
+			<label for="{{ form.description.id_for_label }}"
+				>Product Description:</label
+			>
+			{{ form.description }}
+
+			<button type="submit">Save Product</button>
+		</form>
+	</body>
+</html>
